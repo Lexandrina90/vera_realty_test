@@ -1,0 +1,418 @@
+@import url("https://fonts.cdnfonts.com/css/rawline");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  font-family: "Rawline", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+}
+body .wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+body .container {
+  max-width: 1732px;
+  margin: 0px 14px;
+  box-sizing: content-box;
+}
+
+header .header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 22px 160px;
+  position: relative;
+}
+@media only screen and (min-width: 992px) and (max-width: 1400px) {
+  header .header__container {
+    padding: 22px 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  header .header__container {
+    padding: 22px 0;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  header .header__container {
+    padding: 10px 0;
+  }
+}
+header .header__container::after {
+  content: "";
+  position: absolute;
+  left: -20%;
+  right: 0;
+  top: 100%;
+  width: 130%;
+  height: 1px;
+  background-color: #000000;
+}
+header .header__container .header__hamburger-menu {
+  display: none;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  header .header__container .header__hamburger-menu {
+    display: block;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  header .header__container .header__hamburger-menu {
+    display: block;
+  }
+}
+header .header__container .header__hamburger-menu .hamburger-menu__btn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 24px;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  header .header__container .header__hamburger-menu .hamburger-menu__btn {
+    width: 16px;
+    height: 16px;
+  }
+}
+header .header__container .header__hamburger-menu .hamburger-menu__btn > span, header .header__container .header__hamburger-menu .hamburger-menu__btn > span::before, header .header__container .header__hamburger-menu .hamburger-menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  header .header__container .header__hamburger-menu .hamburger-menu__btn > span, header .header__container .header__hamburger-menu .hamburger-menu__btn > span::before, header .header__container .header__hamburger-menu .hamburger-menu__btn > span::after {
+    height: 1.2px;
+  }
+}
+header .header__container .header__hamburger-menu .hamburger-menu__btn > span::before {
+  content: "";
+  top: -10px;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  header .header__container .header__hamburger-menu .hamburger-menu__btn > span::before {
+    top: -5px;
+  }
+}
+header .header__container .header__hamburger-menu .hamburger-menu__btn > span::after {
+  content: "";
+  top: 10px;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  header .header__container .header__hamburger-menu .hamburger-menu__btn > span::after {
+    top: 5px;
+  }
+}
+header .header__container .header__logo {
+  display: flex;
+  width: 90px;
+  min-height: 40px;
+  padding: 11px 17px;
+  color: #fff;
+  background-color: #000000;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  header .header__container .header__logo {
+    min-height: 30px;
+    padding: 6px 17px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  header .header__container .header__menu {
+    display: none;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  header .header__container .header__menu {
+    display: none;
+  }
+}
+header .header__container .header__menu .menu__link {
+  color: #FF6E1F;
+}
+header .header__container .contacts {
+  display: flex;
+  gap: 28px;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  header .header__container .contacts {
+    gap: 13px;
+  }
+  header .header__container .contacts__item img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+main .main-block__container {
+  padding: 54px 0 54px 160px;
+  margin-bottom: 12px;
+  position: relative;
+}
+@media only screen and (min-width: 992px) and (max-width: 1400px) {
+  main .main-block__container {
+    padding: 0px 0px 54px 0px;
+    margin-bottom: 54px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  main .main-block__container {
+    padding: 0px 0px 54px 0px;
+    margin-bottom: 54px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  main .main-block__container {
+    padding: 0px 0px 54px 0px;
+    margin-bottom: 44px;
+  }
+}
+main .main-block__container::after {
+  content: "";
+  position: absolute;
+  left: -20%;
+  right: 0;
+  top: 100%;
+  width: 130%;
+  height: 1px;
+  background-color: #000000;
+}
+main .main-block__body {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1400px) {
+  main .main-block__body {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  main .main-block__body {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  main .main-block__body {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+main .main-block__content {
+  padding: 344px 0px 0px 0px;
+  position: relative;
+  max-width: 772px;
+}
+main .main-block__content > *:not(:last-child) {
+  margin: 0px 0px 30px 0px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1400px) {
+  main .main-block__content {
+    padding: 120px 233px;
+    text-align: center;
+    max-width: 1372px;
+    align-self: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  main .main-block__content {
+    padding: 80px 165px;
+    text-align: center;
+    max-width: 963px;
+    align-self: center;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  main .main-block__content {
+    padding: 54px 0px;
+    max-width: 739px;
+    align-self: center;
+  }
+}
+main .main-block__content::before {
+  content: "";
+  position: absolute;
+  height: calc(100% + 108px);
+  width: 1px;
+  background-color: #000;
+  right: -14px;
+  top: -54px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1400px) {
+  main .main-block__content::before {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  main .main-block__content::before {
+    display: none;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  main .main-block__content::before {
+    display: none;
+  }
+}
+main h1.main-block__title {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 116%;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  main h1.main-block__title {
+    font-size: 48px;
+    line-height: 121%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  main h1.main-block__title {
+    font-size: 40px;
+    line-height: 125%;
+  }
+  main h1.main-block__title br {
+    display: none;
+  }
+}
+main .main-block__text {
+  font-size: 32px;
+  line-height: 162%;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  main .main-block__text {
+    font-size: 24px;
+    line-height: 183%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  main .main-block__text {
+    font-size: 20px;
+    line-height: 200%;
+  }
+}
+main .main-block__image {
+  height: 875px;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  main .main-block__image {
+    height: 671px;
+  }
+}
+main .main-block__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main .btn {
+  width: 258px;
+  min-height: 53px;
+  padding: 10px 47px;
+  color: #fff;
+  background-color: #000000;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 138%;
+}
+@media only screen and (min-width: 992px) and (max-width: 1400px) {
+  main .btn {
+    width: 268px;
+    min-height: 53px;
+    padding: 10px 52px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  main .btn {
+    width: 223px;
+    min-height: 45px;
+    font-size: 18px;
+    padding: 10px 50px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  main .btn {
+    width: 183px;
+    min-height: 40px;
+    font-size: 18px;
+    padding: 10px 30px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

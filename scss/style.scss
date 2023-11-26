@@ -1,0 +1,300 @@
+@use "reset.scss";
+@use "media.scss" as *;
+
+@import url('https://fonts.cdnfonts.com/css/rawline');
+
+body {
+  font-family: 'Rawline', sans-serif;
+  font-weight: 400;
+  color: #000000;    
+  font-size: 18px;    
+  
+  .wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    max-width: 1732px;
+    margin: 0px 14px; 
+    box-sizing: content-box;
+  }
+}
+
+header {
+  .header__container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: baseline;
+    padding: 22px 160px;
+    position: relative;
+
+    @include respond-to (lg) {
+      padding: 22px 0;  
+    }
+    @include respond-to (md) {
+      padding: 22px 0;  
+    }
+    @include respond-to (sm) {
+      padding: 10px 0;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      left: -20%;
+      right: 0;
+      top: 100%;
+      width: 130%;
+      height: 1px;
+      background-color: #000000;
+    }
+
+    .header__hamburger-menu {
+      display: none;
+      @include respond-to (md) {
+        display: block;
+      }
+      @include respond-to (sm) {
+        display: block;
+      }
+      .hamburger-menu__btn {
+        display: flex;
+        align-items: center;  
+        position: relative;
+        top:0;
+        left: 0;
+        width: 35px;
+        height: 24px;
+        @include respond-to (sm) {
+          width: 16px;
+          height: 16px;
+        }
+
+        & > span,
+        & > span::before,
+        & > span::after {
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: #000;
+          @include respond-to (sm) {
+            height: 1.2px;
+          }
+        }
+        & > span::before {
+          content: '';
+          top: -10px;
+          @include respond-to (sm) {
+            top: -5px;
+          }
+        }
+        & > span::after {
+          content: '';
+          top: 10px;
+          @include respond-to (sm) {
+            top: 5px;
+          }
+        }
+      }
+    }
+   .header__logo {
+      display: flex;
+      width: 90px;
+      min-height: 40px;
+      padding: 11px 17px;
+      color: #fff;
+      background-color: #000000;
+      @include respond-to (sm) {
+        min-height: 30px;
+        padding: 6px 17px;
+      }
+    }
+    .header__menu {
+      @include respond-to (md) {
+        display: none;
+      }
+      @include respond-to (sm) {
+        display: none;
+      }
+      .menu__link{
+        color: #FF6E1F;
+    }
+    
+    }
+    .contacts {
+      display: flex;
+      gap: 28px;
+      @include respond-to (sm) {
+        gap: 13px;
+        &__item img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+
+main {
+  .main-block__container {
+    padding: 54px 0 54px 160px;
+    margin-bottom: 12px;
+    position: relative;
+
+    @include respond-to (lg) {
+      padding: 0px 0px 54px 0px; 
+      margin-bottom: 54px;
+    }
+    @include respond-to (md) {
+      padding: 0px 0px 54px 0px; 
+      margin-bottom: 54px;
+    }
+    @include respond-to (sm) {
+      padding: 0px 0px 54px 0px; 
+      margin-bottom: 44px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: -20%;
+      right: 0;
+      top: 100%;
+      width: 130%;
+      height: 1px;
+      background-color: #000000;
+    }
+  }
+  .main-block__body {
+    display: flex;
+    justify-content: space-between;
+    gap: 28px;
+    @include respond-to (lg) {
+      flex-direction: column;
+      gap: 0;
+    }
+    @include respond-to (md) {
+      flex-direction: column;
+      gap: 0;
+    }
+    @include respond-to (sm) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+  .main-block__content {
+    padding: 344px 0px 0px 0px;
+    position: relative;
+    max-width: 772px;
+    &> *:not(:last-child) {
+      margin: 0px 0px 30px 0px;
+    }
+    @include respond-to (lg) {
+      padding: 120px 233px;
+      text-align: center;
+      max-width: 1372px;
+      align-self: center;
+    }
+    @include respond-to (md) {
+      padding: 80px 165px;
+      text-align: center;
+      max-width: 963px;
+      align-self: center;
+    }
+    @include respond-to (sm) {
+      padding: 54px 0px;
+      max-width: 739px;
+      align-self: center;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      height: calc(100% + 108px);
+      width: 1px;
+      background-color: #000; 
+      right: -14px; 
+      top: -54px;
+      @include respond-to (lg) {
+        display: none;
+      }
+      @include respond-to (md) {
+        display: none;
+      }
+      @include respond-to (sm) {
+        display: none;
+      }
+    }
+  }
+  h1 {
+    &.main-block__title {
+      font-size: 60px;
+      font-weight: 600;
+      line-height: 116%;
+      @include respond-to (md) {
+        font-size: 48px;
+        line-height: 121%;
+      }
+      @include respond-to (sm) {
+        font-size: 40px;
+        line-height: 125%;
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+  .main-block__text{
+    font-size: 32px;
+    line-height: 162%;
+    @include respond-to (md) {
+      font-size: 24px;
+      line-height: 183%;
+    }
+    @include respond-to (sm) {
+      font-size: 20px;
+      line-height: 200%;
+    }
+  }
+  .main-block__image {
+    height: 875px;
+    @include respond-to (sm) {
+      height: 671px;
+    }
+    img{
+      width: 100%;
+      height:100%;
+      object-fit: cover;
+    }
+  }
+  
+  .btn {
+    width: 258px;
+    min-height: 53px;
+    padding: 10px 47px;
+    color: #fff;
+    background-color: #000000;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 138%;
+    @include respond-to (lg) {
+      width: 268px;
+      min-height: 53px;
+      padding: 10px 52px;
+    }
+    @include respond-to (md) {
+      width: 223px;
+      min-height: 45px;
+      font-size: 18px;
+      padding: 10px 50px;
+    }
+    @include respond-to (md) {
+      width: 183px;
+      min-height: 40px;
+      font-size: 18px;
+      padding: 10px 30px;
+    }
+  }
+
+}
